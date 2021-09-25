@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-ct">
+    <form action="assignment" method="POST" enctype="multipart/form-data">
+        <label for="fname">First Name</label>
+        <input type="text" name="firstName" placeholder="First Name" id="fname">
+        <label for="lname">Last Name</label>
+        <input type="text" name="lastName" placeholder="Last Name" id="lname">
+        <label for="eno">Enrolment number</label>
+        <input type="text" name="eno" placeholder="Enrollment Number" id="eno">
+        <label for="file">Enter Link for submission</label><br>
+        <input type="file" name="sub_file" id="file" >
+        
+        <input type="submit" value="Submit" >
+    </form>
+    <form action="/viewsub">
+    <input type="submit" value="View Submissions">
+    </form>
+    </div>
+
+</body>
+</html>

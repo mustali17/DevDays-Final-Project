@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="icon" href="https://e7.pngegg.com/pngimages/425/74/png-clipart-computer-icons-user-login-icon-design-media-area-user.png" size="16x16">
+
+  </head>
+  <style>
+    body {
+        position: relative;
+      min-height: 100vh;
+      min-width: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    background-color: rgb(78, 186, 165);
+    }
+    #sawo-container{
+    border-radius: 10px;   
+    display: block;
+    box-shadow: 0 0 10px;
+ }
+   
+  </style>
+  <body>
+    <div id="sawo-container" style="height: 300px; width: 300px; border-radius: 20px;"></div>
+
+    <script src="https://websdk.sawolabs.com/sawo.min.js"></script>
+    <script>
+      // Fetching payload from sessionStorage
+      const payload = sessionStorage.getItem("payload");
+      
+      var config = {
+        // should be same as the id of the container created on 3rd step
+        containerID: "sawo-container",
+        // can be one of 'email' or 'phone_number_sms'
+        identifierType: "email",
+        // Add the API key copied from 2nd step
+        apiKey: "f16d1b5e-6d1e-4f8c-b060-ae5013b55b20",
+        // Add a callback here to handle the payload sent by sdk
+        onSuccess: (payload) => {
+          // Storing the payload in sessionStorage
+          sessionStorage.setItem("payload", JSON.stringify(payload));
+          // Redirecting to "/success"
+          window.location.href = "welcom";
+        },
+      };
+      var sawo = new Sawo(config);
+      sawo.showForm();
+    </script>
+  </body>
+</html>
