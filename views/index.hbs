@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="form-ct">
     <form action="assignment" method="POST" enctype="multipart/form-data">
         <label for="fname">First Name</label>
@@ -16,15 +17,22 @@
         <input type="text" name="lastName" placeholder="Last Name" id="lname">
         <label for="eno">Enrolment number</label>
         <input type="text" name="eno" placeholder="Enrollment Number" id="eno">
-        <label for="file">Enter Link for submission</label><br>
-        <input type="file" name="sub_file" id="file" >
+        <label for="brc">Branch</label>
+        <input type="text" name="branch" placeholder="Enter your branch" id="brc">
+        <label for="submain">Subject</label>
+        <input type="text" name="submain" placeholder="Enter Subject" id="submain">
+        <label for="sub">Enter Link for submission</label>
+        <input type="text" name="subject" placeholder="Enter Link(Googlr Drive)" id="sub">
+       
         
         <input type="submit" value="Submit" >
     </form>
     <form action="/viewsub">
     <input type="submit" value="View Submissions">
     </form>
+
     </div>
+    <a href="/welcom"><input type="submit" value="Home" style="width:10%;height:10%; margin-left:45%" /></a>    
 
 </body>
 </html>

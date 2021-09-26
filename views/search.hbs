@@ -15,7 +15,10 @@
       <th scope="col">First Name</th>
       <th scope="col">Last Name</th>
       <th scope="col">Enrollment No.</th>
+      <th scope="col">  Branch</th>
+      <th scope="col">  Subject</th>
       <th scope="col">Submissions</th>
+      
     </tr>
   </thead>
   <tbody>
@@ -24,14 +27,17 @@
       <td>{{this.firstName}}</td>
       <td>{{this.lastName}}</td>
       <td>{{this.eno}}</td>
-   
+      <td>{{this.branch}}</td>
+      <td>{{this.submain}}</td>
+       
 
       <td>
-        <embed class="embed-responsive-item" type="image/jpg" src="../public/uploads/mustali.jpg"></embed>
+       <a href="{{this.subject}}" target="_blank">{{this.subject}}</a> 
       </td>
     </tr>
      {{/each}}
   </tbody>
 </table>
+<a href="/welcom"><input type="submit" value="Home" style="width:10%;height:10%; margin-left:45%" /></a>
 </body>
 </html>

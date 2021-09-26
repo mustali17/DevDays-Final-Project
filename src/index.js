@@ -51,6 +51,9 @@ app.post("/assignment", upload.single('sub_file'),async(req,res) => {
             firstName:req.body.firstName,
             lastName:req.body.lastName,
             eno:req.body.eno,
+            branch:req.body.branch,
+            submain:req.body.submain,
+            subject:req.body.subject,
            // file:req.file.filename,
         })
         const submitted=await stdsub.save();

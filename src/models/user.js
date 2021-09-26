@@ -6,7 +6,10 @@ const user=new mongoose.Schema({
        required:true
     },
     lastName:String,
-    eno:Number
+    eno:Number,
+    branch:String,
+    submain:String,
+    subject:String,
     },{
     versionKey:false
 });
